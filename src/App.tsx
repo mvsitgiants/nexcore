@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, ArrowUp } from 'lucide-react';
+import { Phone, ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Modular Imports
@@ -15,6 +15,7 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 // Modals
 import ProductModal from './components/ProductModal';
@@ -116,30 +117,8 @@ export default function App() {
       />
 
       {/* --- Floating Quick Sourcing Widgets --- */}
-      <div className="fixed bottom-6 right-6 z-30 flex flex-col gap-3">
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end">
         
-        {/* Call Trigger (mobile/desktop) */}
-        <a
-          href="tel:9565818068"
-          className="h-12 w-12 rounded-full bg-brand-blue hover:bg-brand-navy text-white flex items-center justify-center shadow-lg shadow-brand-blue/30 hover:scale-110 transition duration-200 cursor-pointer"
-          title="Call Nexcore Engineering"
-          id="floating-call-widget"
-        >
-          <Phone className="h-5.5 w-5.5 fill-white/10" />
-        </a>
-
-        {/* WhatsApp Chat Trigger */}
-        <a
-          href="https://wa.me/919565818068?text=Hello%20Nexcore%20Engineering,%20I%20am%20reviewing%20your%20website%20and%20need%20a%20quotation%20on%20a%20solution."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="h-12 w-12 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center shadow-lg shadow-emerald-600/30 hover:scale-110 transition duration-200"
-          title="WhatsApp Nexcore Engineering"
-          id="floating-whatsapp-widget"
-        >
-          <MessageCircle className="h-5.5 w-5.5 fill-white/10" />
-        </a>
-
         {/* Scroll To Top button */}
         <AnimatePresence>
           {showScrollTop && (
@@ -156,6 +135,19 @@ export default function App() {
             </motion.button>
           )}
         </AnimatePresence>
+
+        {/* Call Trigger (mobile/desktop) */}
+        <a
+          href="tel:9565818068"
+          className="h-12 w-12 rounded-full bg-brand-blue hover:bg-brand-navy text-white flex items-center justify-center shadow-lg shadow-brand-blue/30 hover:scale-110 transition duration-200 cursor-pointer"
+          title="Call Nexcore Engineering"
+          id="floating-call-widget"
+        >
+          <Phone className="h-5.5 w-5.5 fill-white/10" />
+        </a>
+
+        {/* WhatsApp Chat Widget */}
+        <WhatsAppWidget />
       </div>
 
     </div>

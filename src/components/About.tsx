@@ -65,7 +65,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Text Detail */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 pr-12 lg:pr-0">
             <h3 className="text-xl sm:text-2xl font-bold text-brand-navy tracking-tight leading-snug">
               Powering Progress with Premium Sourcing and Certified Engineering Excellence
             </h3>

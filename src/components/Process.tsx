@@ -54,7 +54,7 @@ export default function Process() {
                   }`}
                 >
                   {/* Step details card */}
-                  <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-8">
+                   <div className="w-full md:w-1/2 pl-12 pr-12 md:pl-0 md:px-8">
                     <div
                       className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 relative ${
                         hoveredStep === item.step ? 'border-brand-blue/30 shadow-brand-blue/5' : ''

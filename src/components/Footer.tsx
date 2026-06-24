@@ -51,7 +51,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-950 text-slate-400 pt-16 pb-8 relative border-t border-slate-900 overflow-hidden">
+    <footer className="bg-slate-950 text-slate-400 pt-16 pb-12 relative border-t border-slate-900 overflow-hidden">
       {/* Abstract vector background layout */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
@@ -185,7 +185,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left pr-10 sm:pr-0">
             <p>© 2026 Nexcore Engineering Solutions. All Rights Reserved.</p>
             <span className="hidden sm:inline text-slate-800">|</span>
             <p>
@@ -201,7 +201,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-4">
             <span className="text-slate-700">|</span>
             <button
               onClick={handleScrollToTop}

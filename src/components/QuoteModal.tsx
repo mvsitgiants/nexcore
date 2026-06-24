@@ -92,7 +92,7 @@ export default function QuoteModal({ isOpen, onClose, preSelectedProduct = '' }:
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-white shadow-2xl z-10 border border-slate-100"
+          className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl z-10 border border-slate-100"
         >
           {/* Top colored accent bar */}
           <div className="h-2 bg-gradient-to-r from-brand-blue to-brand-navy" />

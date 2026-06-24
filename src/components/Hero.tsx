@@ -91,12 +91,15 @@ export default function Hero({ onRequestQuote }: HeroProps) {
   return (
     <section 
       id="home" 
-      className="relative pt-20 pb-12 md:pt-28 md:pb-16 bg-cover bg-right lg:bg-center bg-no-repeat bg-slate-50"
+      className="relative z-10 overflow-hidden pt-28 pb-12 md:pt-28 md:pb-16 bg-cover bg-right lg:bg-center bg-no-repeat bg-slate-50"
       style={{ backgroundImage: "url('/herobackground.png')" }}
     >
+      {/* Premium Readability Overlay for Mobile Devices */}
+      <div className="absolute inset-0 bg-white/85 sm:bg-white/70 lg:bg-transparent pointer-events-none z-0" />
+
       {/* Soft Ambient Light Glows */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none z-0" />
+      <div className="absolute top-1/2 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -120,7 +123,7 @@ export default function Hero({ onRequestQuote }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl sm:text-5xl md:text-[52px] font-extrabold text-brand-navy tracking-tight leading-[1.15]"
+                className="text-3xl sm:text-4xl md:text-[52px] font-extrabold text-brand-navy tracking-tight leading-[1.15]"
               >
                 India’s Trusted Partner <br />
                 for <span className="text-[#0B3D91] bg-gradient-to-r from-[#0B3D91] to-blue-600 bg-clip-text text-transparent">Solar Panels, Submersible Pumps & Industrial Motors</span>
@@ -200,16 +203,16 @@ export default function Hero({ onRequestQuote }: HeroProps) {
       </div>
 
       {/* Stats & Features Container (re-wrapped inside max-w-7xl) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mb-16 lg:-mb-20 translate-y-10 lg:translate-y-14">
+      <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mb-16 lg:-mb-20 translate-y-10 lg:translate-y-14">
         
         {/* 1. Stat Counter Block (Glassy Blue Bar) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="bg-gradient-to-r from-[#062B6F] to-[#0B3D91] border border-blue-800/40 rounded-3xl shadow-xl shadow-blue-950/20 text-white overflow-hidden p-6 lg:p-8"
+          className="relative z-10 bg-gradient-to-r from-[#062B6F] to-[#0B3D91] border border-blue-800/40 rounded-3xl shadow-xl shadow-blue-950/20 text-white overflow-hidden p-6 lg:p-8"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 items-center">
+          <div className="grid grid-cols-4 gap-4 items-center">
             
             {/* Stat 1 */}
             <div className="flex items-center gap-4 lg:px-4">
@@ -267,9 +270,9 @@ export default function Hero({ onRequestQuote }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-6 bg-white border border-slate-100 rounded-3xl shadow-md p-6 overflow-hidden"
+          className="relative z-10 mt-6 bg-white border border-slate-100 rounded-3xl shadow-md p-6 overflow-hidden"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 items-center">
+          <div className="grid grid-cols-4 gap-4 items-center">
             
             {/* Feature 1 */}
             <div className="flex items-center gap-4 lg:px-4">
