@@ -1,0 +1,6 @@
+{
+  "name": "Nexcore Engineering Solutions",
+  "description": "Corporate website for Nexcore Engineering Solutions - Powering a Sustainable Tomorrow. High-performance solar panels, submersible pumps, industrial motors, and water pumping solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
